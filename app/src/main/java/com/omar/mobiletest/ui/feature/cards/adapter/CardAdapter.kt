@@ -17,10 +17,10 @@ import com.omar.string_manager.StringReplacement
 class CardAdapter : RecyclerView.Adapter<CardViewHolder>() {
 
     var itemList: List<Card> = listOf()
-    set(value) {
-        updateList(value)
-        field = value.map { it.copy() }.toList()
-    }
+        set(value) {
+            updateList(value)
+            field = value.map { it.copy() }.toList()
+        }
 
     private lateinit var stringManager: StringManager
 
@@ -42,7 +42,8 @@ class CardAdapter : RecyclerView.Adapter<CardViewHolder>() {
     }
 }
 
-class CardViewHolder(private val binding: ItemCardBinding, context: Context) : RecyclerView.ViewHolder(binding.root) {
+class CardViewHolder(private val binding: ItemCardBinding, context: Context) :
+    RecyclerView.ViewHolder(binding.root) {
 
     private val stringManager = StringManager(context)
     private val stringReplacement = StringReplacement(StringReplacement.Placeholder.VALUE)
@@ -51,18 +52,30 @@ class CardViewHolder(private val binding: ItemCardBinding, context: Context) : R
         with(binding) {
             cardType.text = item.typeCard.type
             nameCredit.text =
-                stringManager.getString(R.string.nombre_credito, stringReplacement.setReplacement(item.nameCredit.obfuscateCreditFirstThreeDigits()))
+                stringManager.getString(
+                    R.string.nombre_credito,
+                    stringReplacement.setReplacement(item.nameCredit.obfuscateCreditFirstThreeDigits())
+                )
             limitCreditValue.text =
-                stringManager.getString(R.string.limite_credito, stringReplacement.setReplacement(item.limitCredit.getFormattedValue()))
+                stringManager.getString(
+                    R.string.limite_credito,
+                    stringReplacement.setReplacement(item.limitCredit.getFormattedValue())
+                )
             customCard.cardHolder = item.nameHolder
             customCard.dateExpired = item.dateExpired
             customCard.numberCard = item.numCard
             customCard.srcBackground = item.srcBackground
             customCard.subtitleCard = stringManager.getString(R.string.titulo_tarjeta).toString()
             labelRepaid.textSubtitle =
-                stringManager.getString(R.string.saldo_dispuesto, stringReplacement.setReplacement(item.creditArranged.getFormattedValue()))
+                stringManager.getString(
+                    R.string.saldo_dispuesto,
+                    stringReplacement.setReplacement(item.creditArranged.getFormattedValue())
+                )
             labelAvailable.textSubtitle =
-                stringManager.getString(R.string.saldo_disponible, stringReplacement.setReplacement(item.creditAvailable.getFormattedValue()))
+                stringManager.getString(
+                    R.string.saldo_disponible,
+                    stringReplacement.setReplacement(item.creditAvailable.getFormattedValue())
+                )
             labelTypeHolder.text = item.typeHolder.type
             footer.enableCard = item.enableCard
             progress.progress = item.calculateProgress()
@@ -70,7 +83,8 @@ class CardViewHolder(private val binding: ItemCardBinding, context: Context) : R
     }
 }
 
-class RecyclerDiffCallback(private val newItem: List<Card>, private val oldItem: List<Card>) : DiffUtil.Callback() {
+class RecyclerDiffCallback(private val newItem: List<Card>, private val oldItem: List<Card>) :
+    DiffUtil.Callback() {
 
     override fun getOldListSize(): Int = oldItem.size
 

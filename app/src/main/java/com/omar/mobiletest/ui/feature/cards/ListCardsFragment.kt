@@ -17,7 +17,7 @@ import com.omar.mobiletest.ui.viewmodel.ViewModelFactory
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
-class ListCardsFragment : Fragment(R.layout.fragment_list_cards)  {
+class ListCardsFragment : Fragment(R.layout.fragment_list_cards) {
 
     private val binding by viewBinding<FragmentListCardsBinding>()
     private val viewModel by viewModels<ListCardsViewModel> { ViewModelFactory }
@@ -55,7 +55,7 @@ class ListCardsFragment : Fragment(R.layout.fragment_list_cards)  {
     }
 
     private fun observeSetUp(event: Event) {
-        when(event) {
+        when (event) {
             is Event.SetUpCards -> addCards(event.listCards)
             is Event.SetUpError -> {
 
@@ -64,9 +64,9 @@ class ListCardsFragment : Fragment(R.layout.fragment_list_cards)  {
     }
 
     private fun renderState(state: State) {
-        when(state) {
+        when (state) {
             is State.Loading -> showLoading()
-            else ->  dismissLoading()
+            else -> dismissLoading()
         }
     }
 
