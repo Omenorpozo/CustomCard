@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<dimen name="sizeSpacing100">100dp</dimen>
+	<dimen name="sizeSpacing60">60dp</dimen>
+	<dimen name="sizeSpacing57">57dp</dimen>
+	<dimen name="sizeSpacing35">35dp</dimen>
+	<dimen name="sizeSpacing24">24dp</dimen>
+	<dimen name="sizeSpacing16">16dp</dimen>
+	<dimen name="sizeSpacing12">12dp</dimen>
+	<dimen name="sizeSpacing10">10dp</dimen>
+	<dimen name="sizeSpacing8">8dp</dimen>
+	<dimen name="sizeSpacing7">7dp</dimen>
+	<dimen name="sizeSpacing6">6dp</dimen>
+	<dimen name="sizeSpacing4">4dp</dimen>
+	<dimen name="sizeSpacing1">1dp</dimen>
+
+	<dimen name="sizeText22">22sp</dimen>
+	<dimen name="sizeText18">18sp</dimen>
+	<dimen name="sizeText14">14sp</dimen>
+	<dimen name="sizeText12">12sp</dimen>
+	<dimen name="sizeText10">10sp</dimen>
+	<dimen name="sizeText8">8sp</dimen>
+	<dimen name="sizeText6">6sp</dimen>
+
+	<dimen name="radius16">16dp</dimen>
+	<dimen name="radius8">8dp</dimen>
+	<dimen name="radius4">4dp</dimen>
+	
+	<dimen name="elevation5">5dp</dimen>
+
+	<dimen name="card_item_image_width">264dp</dimen>
+	<dimen name="card_item_image_height">175dp</dimen>
+
+	<dimen name="progress_bar_height">6dp</dimen>
+</resources>

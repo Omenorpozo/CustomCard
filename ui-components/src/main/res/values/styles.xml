@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="styleTitle">
+        <item name="android:textSize">@dimen/sizeText18</item>
+        <item name="lineHeight">@dimen/sizeSpacing16</item>
+        <item name="android:textColor">@color/dark_blue</item>
+    </style>
+
+    <style name="styleTitleBold">
+        <item name="android:textSize">@dimen/sizeText18</item>
+        <item name="lineHeight">@dimen/sizeSpacing16</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="styleSubTitle">
+        <item name="android:textSize">@dimen/sizeText12</item>
+        <item name="lineHeight">@dimen/sizeSpacing16</item>
+        <item name="android:textColor">@color/dark_blue</item>
+    </style>
+
+    <style name="styleSubTitleBold">
+        <item name="android:textSize">@dimen/sizeText12</item>
+        <item name="lineHeight">@dimen/sizeSpacing16</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="styleLimit">
+        <item name="android:textSize">@dimen/sizeText14</item>
+        <item name="lineHeight">@dimen/sizeSpacing16</item>
+        <item name="android:textColor">@color/dark_blue</item>
+    </style>
+
+    <style name="styleLimitBold">
+        <item name="android:textSize">@dimen/sizeText14</item>
+        <item name="lineHeight">@dimen/sizeSpacing16</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="styleControlBold">
+        <item name="android:textSize">@dimen/sizeText18</item>
+        <item name="lineHeight">@dimen/sizeSpacing16</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

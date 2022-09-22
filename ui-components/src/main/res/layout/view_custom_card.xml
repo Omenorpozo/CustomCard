@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sizeSpacing16"
+        app:cardCornerRadius="@dimen/radius16"
+        app:layout_constraintWidth_min="320dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@color/dark_blue" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/sizeSpacing24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/sizeSpacing16"
+                    android:background="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/cardHolder" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/chipLogo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/sizeSpacing60"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitEnd"
+                    android:tint="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_chip_card" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/creditCardNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizeText22"
+                    android:layout_marginTop="@dimen/sizeSpacing10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardName" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/cardHolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sizeSpacing16"
+                    android:text="ANDREW MOCKUPISH"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizeText10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/creditCardNumber" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/validHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sizeSpacing10"
+                    android:layout_marginEnd="@dimen/sizeSpacing8"
+                    android:text="VALID"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizeText6"
+                    app:layout_constraintEnd_toStartOf="@+id/creditCardExpiration"
+                    app:layout_constraintTop_toBottomOf="@+id/creditCardNumber" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/creditCardExpiration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:text="02/22"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizeText14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/validHint" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/cardName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizeText8"
+                    app:layout_constraintBottom_toBottomOf="@+id/chipLogo"
+                    app:layout_constraintStart_toEndOf="@+id/chipLogo"
+                    app:layout_constraintTop_toTopOf="@+id/chipLogo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</merge>

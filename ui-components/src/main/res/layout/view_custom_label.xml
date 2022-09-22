@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shape_circle"
+            android:layout_marginTop="@dimen/sizeSpacing10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/styleSubTitle"
+            android:text="Dispuesto"
+            android:layout_marginStart="@dimen/sizeSpacing6"
+            app:layout_constraintStart_toEndOf="@+id/badge"
+            app:layout_constraintTop_toTopOf="@+id/badge"
+            app:layout_constraintBottom_toBottomOf="@+id/badge"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSpacing4"
+            style="@style/styleLimitBold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/badge"
+            tools:text="3278,05€" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

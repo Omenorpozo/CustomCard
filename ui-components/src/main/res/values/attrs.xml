@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="CreditCardStyle" format="reference" />
+    <attr name="LabelStyle" format="reference" />
+
+    <attr name="ToggleStyle" format="reference" />
+    <attr name="ButtonControlStyle" format="reference" />
+
+    <attr name="FooterStyle" format="reference" />
+    <attr name="RibbonViewStyle" format="reference" />
+
+    <declare-styleable name="CustomCreditCard">
+        <attr name="srcBackground" format="reference" />
+        <attr name="subtitleCard" format="string" />
+        <attr name="numberCard" format="string" />
+        <attr name="cardHolder" format="string" />
+        <attr name="dateExpired" format="string" />
+    </declare-styleable>
+    <declare-styleable name="CustomLabel">
+        <attr name="colorBadge" format="reference" />
+        <attr name="textTitle" format="string" />
+        <attr name="textSubtitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomToggle">
+        <attr name="textToggle" format="string" />
+        <attr name="checkedToggle" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ButtonControl">
+        <attr name="textButton" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomFooter">
+        <attr name="textLeft" format="string" />
+        <attr name="textRight" format="string" />
+        <attr name="enableCard" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="RibbonView">
+        <attr name="ribbonFillColor" format="color" />
+        <attr name="ribbonStrokeColor" format="color" />
+        <attr name="ribbonStrokeWidth" format="dimension" />
+        <attr name="ribbonArcLength" format="integer" />
+        <attr name="ribbonGravity" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>
+
+
+
+

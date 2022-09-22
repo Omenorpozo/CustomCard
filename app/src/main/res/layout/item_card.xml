@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/sizeSpacing6"
+    android:layout_marginStart="@dimen/sizeSpacing6"
+    android:layout_marginEnd="@dimen/sizeSpacing6"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/radius4"
+    app:cardElevation="@dimen/sizeSpacing4"
+    app:cardMaxElevation="@dimen/sizeSpacing4"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/sizeSpacing8"
+            android:layout_marginEnd="@dimen/sizeSpacing10">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/progress_bar_height"
+                android:layout_marginTop="@dimen/sizeSpacing6"
+                android:background="@color/gray"
+                android:progress="30"
+                android:progressDrawable="@drawable/shape_progress_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/limitCredit" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/infoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dots"
+                app:layout_constraintBottom_toBottomOf="@+id/cardType"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cardType"
+                style="@style/styleTitleBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sizeSpacing16"
+                android:layout_marginEnd="@dimen/sizeSpacing6"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintEnd_toStartOf="@+id/infoButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nameCredit"
+                style="@style/styleSubTitleBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sizeSpacing10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardType" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/limitCredit"
+                style="@style/styleLimit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sizeSpacing24"
+                android:text="Límite de crédito"
+                app:layout_constraintEnd_toStartOf="@+id/limitCreditValue"
+                app:layout_constraintStart_toStartOf="@+id/cardType"
+                app:layout_constraintTop_toBottomOf="@+id/customCard" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/limitCreditValue"
+                style="@style/styleLimit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/limitCredit" />
+
+            <com.omar.ui_components.view.cardview.CustomCard
+                android:id="@+id/customCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sizeSpacing24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameCredit" />
+
+            <com.omar.ui_components.view.textview.CustomLabel
+                android:id="@+id/labelRepaid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:colorBadge="@color/yellow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progress"
+                app:textTitle="Dispuesto" />
+
+            <com.omar.ui_components.view.textview.CustomLabel
+                android:id="@+id/labelAvailable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:colorBadge="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progress"
+                app:textTitle="Disponible" />
+
+            <com.omar.ui_components.view.textview.CustomRibbon
+                android:id="@+id/labelTypeHolder"
+                style="@style/styleSubTitleBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sizeSpacing10"
+                android:ems="5"
+                android:gravity="end|center"
+                android:textSize="@dimen/sizeText10"
+                app:layout_constraintBottom_toBottomOf="@+id/nameCredit"
+                app:layout_constraintStart_toEndOf="@+id/nameCredit"
+                app:layout_constraintTop_toTopOf="@+id/nameCredit"
+                app:ribbonFillColor="@color/dark_blue"
+                app:ribbonGravity="right"
+                app:ribbonStrokeColor="@color/white"
+                app:ribbonStrokeWidth="2dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.omar.ui_components.view.footer.CustomFooter
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sizeSpacing10"
+            app:textLeft="Tarjeta"
+            app:textRight="Card Control"
+            app:enableCard="false"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>

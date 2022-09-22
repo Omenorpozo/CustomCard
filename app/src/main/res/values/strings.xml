@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MobileTest</string>
+    
+    <string name="saldo_dispuesto">&amp;&amp;&amp; {{VALUE}}</string>
+    <string name="saldo_disponible">&amp;&amp;&amp; {{VALUE}}</string>
+    <string name="nombre_credito">{{BOLD}}CRÉDITO{{/BOLD}} {{VALUE}}</string>
+    <string name="subtitulo_tarjeta">{{VALUE}}\n{{VALUE}}</string>
+    <string name="limite_credito">&amp;&amp;&amp; {{VALUE}}</string>
+    <string name="titulo_tarjeta">FREE CREDIT\nCARD MOCKUP</string>
+</resources>
