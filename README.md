@@ -12,5 +12,5 @@ Se ha incorporado un estado de la vista a través de StateFlow.
 
 ## Modulos
 * **app** - Módulo de la aplicación con acceso a todos los módulos.
-* **ui-components** - Módulo que solo incorpora todas las custom views.
-* **string-manager** - Módulo que se encarga de la carga de string customizados.
+* **ui-components** - Módulo que incorpora todas las custom views.
+* **string-manager** - Módulo que se centra de la carga de string customizados.
