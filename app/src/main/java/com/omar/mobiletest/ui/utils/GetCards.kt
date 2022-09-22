@@ -61,8 +61,8 @@ object GetCards {
             "Omar Aldair Menor Pozo",
             "O9/22",
             "500.00",
+            "100.00",
             "600.00",
-            "500.00",
             ContextCompat.getDrawable(context, R.drawable.gradient_card),
             false
         )
